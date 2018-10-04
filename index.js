@@ -1,14 +1,16 @@
+var num = 0;
+
 function takeANumber(array, name) {
-  array.push(`${name}`);
-  return `Welcome, ${name}. You are number ${array.length} in line.`;
+  array.push(num++);
+  return `Welcome, ${name}. You are number ${num} in line.`;
 }
 
 function nowServing(array) {
-  let i = 0;
+  // let i = 0;
   
-  while (i < array.length) {
-    i++;
-  }
+  // while (i < array.length) {
+  //   i++;
+  // }
   if (array.length === 0) {
     return "There is nobody waiting to be served!";
   } else {
@@ -28,9 +30,4 @@ function currentLine(array) {
     return "The line is currently:" + line;
   }
 }
-
-
-
-
-
 
